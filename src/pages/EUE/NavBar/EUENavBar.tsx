@@ -29,12 +29,15 @@ export class EUENavBar extends Component {
 		  <Navbar className="nav">
 			  <Navbar.Brand href="#"><img id="logo"  src={logo}></img></Navbar.Brand>
 			  <Navbar.Toggle />
-			  <Nav className="ml-auto enlaces">
-				  <Nav.Link className="justify-content-end" href="#"><b>Inicio</b></Nav.Link>
-			  	  <Nav.Link className="justify-content-end" href="#"><b>Formularios</b></Nav.Link>
-			      <Nav.Link className="justify-content-end" href="#"><b>Contacto</b></Nav.Link>
-			  </Nav>
-			  <Nav>
+			  <div className="navlink-eue">
+				  <p>Expediente Único de Ejecución</p>
+				  <Nav className="ml-auto enlaces">
+					  <Nav.Link className="justify-content-end" href="#"><b>Inicio</b></Nav.Link>
+				  	  <Nav.Link className="justify-content-end" href="#"><b>Formularios</b></Nav.Link>
+				      <Nav.Link className="justify-content-end" href="#"><b>Contacto</b></Nav.Link>
+				  </Nav>
+			  </div>
+			  <Nav className="info-usuario">
 			    <Navbar.Collapse className="justify-content-end">
 				    <Image className="profilepic" src={logo} roundedCircle />
 				    <Navbar.Text >

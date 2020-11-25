@@ -89,7 +89,7 @@ export class PlanIntervencion extends Component<{}, IIngresoState> {
 	});
 	joven_id = window.location.href.substring((window.location.href.lastIndexOf('/')) + 1);
 	centro_id = 1;
-	gestor_caso = 2;
+	gestor_caso = 1;
 
 	handleChangePrestacion (event:any, input:any) {
 		event.persist();
@@ -121,7 +121,6 @@ export class PlanIntervencion extends Component<{}, IIngresoState> {
 
 	handleSubmit = (event:any) => {
 	    event.preventDefault();
-	    console.log("Hola");
 	}
 
 	fetchInitialData () {
@@ -134,8 +133,8 @@ export class PlanIntervencion extends Component<{}, IIngresoState> {
 			      		return { 
 			      			nombre :res.data.joven[0].nombre,
 			      			fecha_nac :moment(res.data.joven[0].fecha_nac).format("DD/MM/YYYY"),
-				      		casa : res.data.cama[0].length > 0 ? res.data.cama[0][0].casa.nombre : "",
-				      		cama : res.data.cama[0].length > 0 ? res.data.cama[0][0].nombre : "",
+				      		casa : res.data.cama.length > 0 ? res.data.cama[0][0].casa.nombre : "",
+				      		cama : res.data.cama.length > 0 ? res.data.cama[0][0].nombre : "",
 				      		prestaciones: res.data.prestaciones,
 				      		objetivos: res.data.objetivos,
 				      		calle: res.data.joven[0].calle,

@@ -16,7 +16,6 @@
 }
 
 .enlaces {
-	padding-top:30px;
 	a {
 		font-size:20px;
 	}
@@ -40,4 +39,20 @@
 .titulo {
 	display: block;
 	width: 40vw;
+}
+
+.navlink-eue {
+	margin-left: 20px;
+	font-size: 30px;
+    padding-top: 50px;
+    color: #717171;
+}
+
+.info-usuario {
+	position: absolute;
+    right: 0vw;
+}
+
+.notification {
+	color: #404040
 }

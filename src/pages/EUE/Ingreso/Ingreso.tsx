@@ -11,8 +11,9 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import ReactDOM from 'react-dom';
 import moment from 'moment';
-require('typeface-roboto-condensed')
+import { validateRut } from '@fdograph/rut-utilities';
 
+require('typeface-roboto-condensed')
 
 interface IIngresoState {
 	foto: any;
@@ -264,7 +265,18 @@ export class Ingreso extends Component<{}, IIngresoState> {
       duracion_anios: Yup.number().integer("Debe ingresar un valor entero"),
       duracion_meses: Yup.number().integer("Debe ingresar un valor entero"),
       duracion_abonos: Yup.number().integer("Debe ingresar un valor entero"),
-      run_persona: Yup.string().required("Debe ingresar un adulto significativo"),
+      run_persona: Yup.string().required("Debe ingresar un adulto significativo")
+			.test("test-name", "Debe ingresar un rut válido", 
+            value=> validateRut(value)
+            ),
+      rut: Yup.string().required("Debe ingresar un adulto significativo")
+			.test("test-name", "Debe ingresar un rut válido", 
+            value=> validateRut(value)
+            ),
+      run_familiar: Yup.string().required("Debe ingresar un adulto significativo")
+			.test("test-name", "Debe ingresar un rut válido", 
+            value=> validateRut(value)
+            )
 	});
 
 	handleChangeCasa (event:any) {

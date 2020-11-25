@@ -10,7 +10,10 @@
 .error {
 	color:red;
 }
-.info-campo {display:block}
+.info-campo {
+	display:block;
+	font-weight: bold;
+}
 
 .react-datepicker-wrapper {
 	display:block !important;
@@ -105,4 +108,8 @@ label {
 .oculto {
 	display:none;
 	margin-top: 5px;
+}
+
+.bell {
+	color: #404040;
 }
