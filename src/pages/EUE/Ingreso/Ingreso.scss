@@ -1,0 +1,103 @@
+.form-control {
+	margin-right: 20px;
+}
+
+body {
+	font-family: "Roboto Condensed"
+}
+
+.form-inline {
+	display: inline-flex;
+	width:100%;
+}
+
+.error {
+	color:red;
+}
+
+.react-datepicker-wrapper {
+	display:block !important;
+}
+
+.campo-select {
+	width:100%;
+	padding: .375rem 1.75rem .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    vertical-align: middle;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.container-fluid {
+	max-width: 90vw;
+	padding-top: 30px;
+	background-color: #f8f9fa;
+	color: #5c6873;
+	padding-left: 80px;
+	padding-right: 80px;
+	.boton-superior {
+			border-radius:0px;
+			margin-right:10px;
+	}
+	.titulo-seccion {
+		margin-bottom: 25px;
+	}
+	.form-button {
+		display:flow-root;
+	}
+	margin-bottom: 50px;
+}
+.lh1 {
+	  border-bottom: 3px solid #e22c2c;
+	  margin-bottom: 25px;
+	  width: 25px;
+}
+
+.v1 {
+	  border-left: 3px solid #e22c2c;
+	  height: 60px;
+	  margin-right: 20px;
+}
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    background-color: #d60909;
+    border: #f00;
+    opacity: 0.45;
+}
+
+.campo-form {
+	margin-right:10px;
+	margin-bottom:10px;
+}
+
+label {
+	font-size:18px;
+}
+
+.svg-inline--fa {
+	height:20px;
+	width: auto;
+	margin-right: 10px;
+	color: #e22c2c;
+}
+
+.titulo-bold {
+	font-weight: bolder;
+	font-size: 18px;
+}
+
+.titulo-seccion {
+    margin-top:10px;
+}
+
+.radiogroup {
+	margin-right:10px;
+}
+
+.boton {
+	color:#fff
+}
