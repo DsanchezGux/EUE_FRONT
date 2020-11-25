@@ -17,11 +17,10 @@ export class EUENavBar extends Component {
   render() {
 	let usuario;
 	let ruta = window.location.href;
-	var n = ruta.lastIndexOf('/');
-	var result = ruta.substring(n + 1);
-	if(!result.startsWith("pi")) {
+	if( ruta.indexOf('ingreso') >= 0){
 	  usuario = <a>Encargado(a) de Ingreso</a> 
-	} else {
+	}
+	else {
 	  usuario = <a>Gestor(a) de Caso</a> 
 	}
     return ( 
