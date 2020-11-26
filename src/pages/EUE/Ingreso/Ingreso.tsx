@@ -269,11 +269,7 @@ export class Ingreso extends Component<{}, IIngresoState> {
 			.test("test-name", "Debe ingresar un rut válido", 
             value=> validateRut(value)
             ),
-      rut: Yup.string().required("Debe ingresar un adulto significativo")
-			.test("test-name", "Debe ingresar un rut válido", 
-            value=> validateRut(value)
-            ),
-      run_familiar: Yup.string().required("Debe ingresar un adulto significativo")
+      rut: Yup.string().required("Debe ingresar el run del joven")
 			.test("test-name", "Debe ingresar un rut válido", 
             value=> validateRut(value)
             )
@@ -320,17 +316,17 @@ export class Ingreso extends Component<{}, IIngresoState> {
 		})
 	}
 
-	handleChangeCiudad (event:any) {
+	handleChangeCiudad (event:any,input:any) {
 		event.persist();
 		let name= "";
-		switch(event.target.id){
-			case 'ciudades_joven':
+		switch(input){
+			case 'ciudad':
 				name = 'comunas_joven';
 				break;
-			case 'ciudades_persona':
+			case 'ciudad_persona':
 				name = 'comunas_persona';
 				break;
-			case 'ciudades_familiar':
+			case 'ciudad_familiar':
 				name = 'comunas_familiar';
 				break;
 		}
@@ -688,7 +684,10 @@ export class Ingreso extends Component<{}, IIngresoState> {
 				       className="campo-select" 
 				       as="select" 
 				       size="sm" 
-				       custom onChange={this.handleChangeCiudad}>
+				       custom onChange={(e) => {
+						        handleChange(e);
+						        this.handleChangeCiudad(e,'ciudad');
+						    }}>
 				       <option >
 						    Seleccione una opción
 						 	 </option>
@@ -834,7 +833,10 @@ export class Ingreso extends Component<{}, IIngresoState> {
 				    <Form.Control 
 				      className="campo-select" 
 				      as="select" 
-				      size="sm" custom onChange={this.handleChangeCiudad}>
+				      size="sm" custom onChange={(e) => {
+						        handleChange(e);
+						        this.handleChangeCiudad(e,'ciudad_persona');
+						    }}>
 				       <option >
 						   Seleccione una opción
 					   </option>
@@ -991,7 +993,10 @@ export class Ingreso extends Component<{}, IIngresoState> {
 	             <Col sm={3} className="campo-form">
 	                <Form.Group controlId="ciudad_familiar">
 					    <Form.Label>Ciudad</Form.Label>
-					    <select className="campo-select" >
+					    <select className="campo-select" onChange={(e) => {
+						        handleChange(e);
+						        this.handleChangeCiudad(e,'ciudad_familiar');
+						    }}>
 		    				<option>
 						    		Seleccione una opción
 						    </option>
